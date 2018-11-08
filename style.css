@@ -1,0 +1,20 @@
+#main 
+{
+   
+	margin: auto;
+	text-align: center;
+}
+
+
+.pet
+{
+
+	border: thick double #32a1ce;	
+	max-width: 400px;
+	max-height: 300px;
+    	margin: auto;
+    	border-color: #fa0285;
+	cursor: pointer;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	border-radius: 50px;
+}

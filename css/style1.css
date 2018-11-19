@@ -8,10 +8,9 @@
 	padding: 10px 30px 10px 37px;
     background-color: black;
 	font-family:Tahoma;
-	margin-top: 50px;
+	margin-top: 90px;
 	margin-bottom: 50px;
 	text: white;
-
 }
 .logo{
 	border: thick groove #32a1ce;
@@ -32,7 +31,6 @@
 }
 .bgpage{
 	background-repeat: no-repeat;
-	background-size: contain;
 }
 
 

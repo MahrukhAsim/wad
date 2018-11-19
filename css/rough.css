@@ -1,17 +1,23 @@
 #main {
-	max-width: 530px;
-	margin: auto;
-	height: auto;
+	max-width:200px;
+	max-height: 10px;
 	font-family: Tahoma;
+
+
 }
 .article {
-	padding: 10px 30px 10px 37px;
     background-color: black;
 	font-family:Tahoma;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	text: white;
+	float: left;
 
+}
+.box_input{
+	width: 400px;
+	height: 30px;
+	background-color:thistle;
+	border-radius: 10px;
+	align: center;
+	text: white;
 }
 .logo{
 	border: thick groove #32a1ce;
@@ -22,17 +28,9 @@
 	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 	border-radius: 60px;
 }
-.box_input{
-	width: 400px;
-	height: 30px;
-	background-color:thistle;
-	border-radius: 10px;
-	align: center;
-	text: white;
-}
 .bgpage{
 	background-repeat: no-repeat;
-	background-size: contain;
+
 }
 
 

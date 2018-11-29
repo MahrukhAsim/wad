@@ -14,21 +14,21 @@ var questions = [{
     correctAnswer : 2
 },{
     question : "Using _______ statement is how you test for a specific condition",
-    choices : [ "select",
+    choices : [
         "if",
         "for",
         "none of the above"],
     correctAnswer : 1
 }, {
     question: "What is the color of a reddish?",
-    choices: ["select",
+    choices: [ "green",
         "red",
         "black",
         "white"],
-    correctAnswer: 2
+    correctAnswer: 3
 } ,{
     question : "Who is the founder of pakistan?",
-    choices : [ "select",
+    choices : ["Gandhi",
         "Allama iqbal",
         "Quaid e Azam",
         "Donald Trump"],
@@ -41,13 +41,27 @@ var quizOver = false;
 displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
-    document.getElementById("question").innerHTML=questions[currentQuestion].question+questions[currentQuestion].choices;
-    currentQuestion++;
-    document.getElementById("choices").classList=questions[currentQuestion].question+questions[currentQuestion].choices;
+    currentQuestion=currentQuestion+1;
+    if(questions.length==currentQuestion)
+        displayScore();
+    displayCurrentQuestion();
 }
 function displayCurrentQuestion() {
-    document.getElementById("question").innerHTML=questions[currentQuestion].question+questions[currentQuestion].choices;
-    currentQuestion++;
+    var myQuestion = document.getElementById("question");
+    var answer = document.getElementById("choice-list");
+    myQuestion.innerText = questions[currentQuestion].question;
+    answer.innerHTML = "";
+    for(var i = 0;i<questions[currentQuestion].choices.length;i++) {
+        answer.innerHTML += "<li>" + "<input type=radio name = option value = questions[currentQuestion].choices[i]>" + questions[currentQuestion].choices[i] + "</li>";
+        if (document.querySelector("input[type=radio]:checked") == questions[currentQuestion].correctAnswer)
+        {
+            correctAnswers = correctAnswers + 1;
+        }
+        if(document.querySelector("input[type=radio]:checked")==false)
+        {
+            alert('Please answer question '+i);
+        }
+    }
 }
 function resetQuiz() {
     currentQuestion = 0;
@@ -55,6 +69,10 @@ function resetQuiz() {
     displayCurrentQuestion();
     displayScore();
     hideScore();
+}
+function displayerror()
+{
+
 }
 function displayScore() {
     document.getElementById("result").innerHTML = "you scored: " + correctAnswers + " out of: " + questions.length;

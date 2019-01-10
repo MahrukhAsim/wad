@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require "Connections/Functions.php"
+require "server/functions.php";
 ?>
 <html lang="en">
 <head>
@@ -33,7 +33,7 @@ require "Connections/Functions.php"
                                        id="search-bar" name="search"
                                        placeholder="Find Mobile Phones, Laptops, and more..">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary btn-lg" type="button"><i class="fas fa-search"></i></button>
+                                    <button class="btn btn-outline-secondary btn-lg" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -41,13 +41,13 @@ require "Connections/Functions.php"
                     <div class="col-lg-3 col-md-4 col-sm-5">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 float-sm-right">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"><i class="fas fa-heart sc-color fa-2x"></i></a>
+                                <a class="nav-link" href="index.html"><i class="fas fa-heart sc-color fa-2x"></i></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"><i class="fas fa-shopping-cart sc-color fa-2x"></i></a>
+                                <a class="nav-link" href="index.html"><i class="fas fa-shopping-cart sc-color fa-2x"></i></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.php"> <span class="sc-fs">Login </span></a>
+                                <a class="nav-link" href="index.html"> <span class="sc-fs">Login </span></a>
                             </li>
                         </ul>
                     </div>
@@ -67,9 +67,7 @@ require "Connections/Functions.php"
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-                    <?php
-                    getCats();
-                    ?>
+                    <?php getCats(); ?>
                 </ul>
             </li>
             <li class="active">
@@ -78,9 +76,7 @@ require "Connections/Functions.php"
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <?php
-                    getBrands();
-                    ?>
+                    <?php getBrands(); ?>
                 </ul>
             </li>
             <li>
@@ -100,21 +96,19 @@ require "Connections/Functions.php"
     <article id="content" class="container-fluid bg-white">
 
         <div class="row">
-            <div class="col">
-                Content
-            </div>
+                <?php getPro(); ?>
         </div>
     </article>
 
 
 </div>
 <footer class="container-fluid">
-    <div class="row">
-        <div class="col text-center">
-            &copy; 2019 by Muhammad Ali Makhdoom
+        <div class="row">
+            <div class="col text-center">
+               &copy; 2019 by Muhammad Ali Makhdoom
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.bundle.js"></script>
 </body>
